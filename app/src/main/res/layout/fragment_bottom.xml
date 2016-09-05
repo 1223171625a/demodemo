@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@color/fragment_backg">
+
+    <Button
+        android:id="@+id/bt_ib1"
+        android:background="@drawable/home_state"
+        style="@style/fragment_bottom"
+       />
+    <Button
+        android:id="@+id/bt_ib2"
+        android:background="@drawable/search_state"
+        style="@style/fragment_bottom"/>
+    <Button
+        android:id="@+id/bt_ib3"
+        android:background="@drawable/class_state"
+        style="@style/fragment_bottom"/>
+    <Button
+        android:id="@+id/bt_ib4"
+        android:background="@drawable/shop_state"
+        style="@style/fragment_bottom"/>
+    <Button
+        android:id="@+id/bt_ib5"
+        android:background="@drawable/more_state"
+        style="@style/fragment_bottom"/>
+
+
+
+
+
+</LinearLayout>

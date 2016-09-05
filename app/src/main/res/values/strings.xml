@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Shopping</string>
+    <string name="lead_skiptext">直接跳过</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sc">\t\t\t\t\t\t请输入关键字</string>
+</resources>

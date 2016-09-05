@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <!--设置title -->
+    <fragment
+        android:id="@+id/id_fragment_title"
+        android:name="edu.feicui.app.base.fragment.ContentFragment"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+    <!--设置bottom -->
+    <fragment
+        android:id="@+id/id_fragment_bottom"
+        android:name="edu.feicui.app.base.fragment.BottomFragment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"/>
+
+    <ScrollView
+        android:id="@+id/home_sv"
+        android:layout_below="@+id/id_fragment_title"
+        android:layout_above="@id/id_fragment_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:fillViewport="false">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/home_linearLayout"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <SearchView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_search"
+                    android:id="@+id/searchView"
+                    android:layout_weight="1"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/search_backg"
+                    android:textStyle="bold"
+                    android:text="搜\t\t索"/>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                >
+                <android.support.v4.view.ViewPager
+                    android:background="@drawable/shape_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:id="@+id/home_viewpPager">
+                </android.support.v4.view.ViewPager>
+
+                <LinearLayout
+                    android:gravity="center_horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <ImageView
+                        android:id="@+id/icon1"
+                        style="@style/small_icon"
+                        android:contentDescription="small_icon1"
+                        />
+                    <ImageView
+                        android:id="@+id/icon2"
+                        style="@style/small_icon"
+                        android:contentDescription="small_icon2"
+                        />
+                    <ImageView
+                        android:id="@+id/icon3"
+                        style="@style/small_icon"
+                        android:contentDescription="small_icon3"
+                        />
+                    <ImageView
+                        android:id="@+id/icon4"
+                        style="@style/small_icon"
+                        android:contentDescription="small_icon4"
+                        />
+                    <ImageView
+                        android:id="@+id/icon5"
+                        style="@style/small_icon"
+                        android:contentDescription="small_icon5"
+                        />
+                    <ImageView
+                        android:id="@+id/icon6"
+                        style="@style/small_icon"
+                        android:contentDescription="small_icon6"
+                        />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+            <!--限时抢购-->
+            <RelativeLayout
+                android:id="@+id/timeBuy"
+                android:onClick="timeBuy"
+                style="@style/home_list_kuang">
+                <ImageView
+                    android:id="@+id/home_iv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/home_classify_01"/>
+
+                <TextView
+                    android:id="@+id/home_tv1"
+                    android:layout_toRightOf="@id/home_iv1"
+                    style="@style/home_tv"
+                    android:text="限时抢购"/>
+                <ImageView
+                    style="@style/home_iv_list"/>
+            </RelativeLayout>
+
+            <!--促销快报-->
+            <RelativeLayout
+                style="@style/home_list_kuang">
+                <ImageView
+                    android:id="@+id/home_iv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/home_classify_02"/>
+
+                <TextView
+                    android:id="@+id/home_tv2"
+                    android:layout_toRightOf="@id/home_iv2"
+                    style="@style/home_tv"
+                    android:text="促销快报"/>
+                <ImageView
+                    style="@style/home_iv_list"/>
+            </RelativeLayout>
+            <!--新品上架-->
+            <RelativeLayout
+                style="@style/home_list_kuang">
+                <ImageView
+                    android:id="@+id/home_iv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/home_classify_03"/>
+
+                <TextView
+                    android:id="@+id/home_tv3"
+                    android:layout_toRightOf="@id/home_iv3"
+                    style="@style/home_tv"
+                    android:text="新品上架"/>
+                <ImageView
+                    style="@style/home_iv_list"/>
+            </RelativeLayout>
+
+            <!--热门单品-->
+            <RelativeLayout
+                style="@style/home_list_kuang"
+               >
+                <ImageView
+                    android:id="@+id/home_iv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/home_classify_04"/>
+
+                <TextView
+                    android:id="@+id/home_tv4"
+                    android:layout_toRightOf="@id/home_iv4"
+                    style="@style/home_tv"
+                    android:text="热门单品"/>
+                <ImageView
+                    style="@style/home_iv_list"/>
+            </RelativeLayout>
+
+            <!--推荐品牌-->
+            <RelativeLayout
+                style="@style/home_list_kuang">
+                <ImageView
+                    android:id="@+id/home_iv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/home_classify_05"/>
+
+                <TextView
+                    android:id="@+id/home_tv5"
+                    android:layout_toRightOf="@id/home_iv5"
+                    style="@style/home_tv"
+                    android:text="推荐品牌"/>
+                <ImageView
+                    style="@style/home_iv_list"/>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>
